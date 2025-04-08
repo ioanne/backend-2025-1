@@ -7,8 +7,8 @@ app = Flask(__name__)
 # localhost:5000/?nombre=valor&apellido=valor
 def hello_world():
     print(request)
-    nombre = request.args.get('nombre')
-    apellido = request.args.get('apellido')
+    nombre = request.args.get(key='nombre', default='Sin nombre')
+    apellido = request.args.get(key='apellido', default='Sin apellido')
     return f'<html>Hola {nombre} {apellido}</html>'
 
 
@@ -16,6 +16,7 @@ def hello_world():
 # Bruno / laureano dice que esto pisa a lo anterior y se ejecuta esto y va a fallar
 @app.route('/usuario/<int:id>/')
 def usuario_id(id):
+    print(request)
     return f'Hola usuario con id: {id}!'
 
 

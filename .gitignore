@@ -135,6 +135,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+fastapiEnv
 
 # Spyder project settings
 .spyderproject
