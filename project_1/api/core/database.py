@@ -12,3 +12,22 @@ AsyncSessionLocal = sessionmaker(
 
 Base = declarative_base()
 target_metadata = Base.metadata
+
+
+"""
+Comandos:
+Este comando se corre solo la primera vez que se crea el proyecto
+Crea la base de datos
+
+alembic init alembic
+
+Despues de inicializar alembic configuramos todo lo que dice el tutorial
+
+
+y luego:
+
+alembic revision --autogenerate -m "El comentario que quieran"
+alembic upgrade head
+
+
+"""
