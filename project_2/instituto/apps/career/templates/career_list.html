@@ -1,0 +1,26 @@
+{% include "base.html" %} {% block nav %}
+<p>Este es el nuevo nav</p>
+
+{% endblock %} {% block content %}
+<h1>Lista de Carreras</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for career in careers %}
+        <tr>
+            <td>{{ career.id }}</td>
+            <td>{{ career.name }}</td>
+            <td>{{ career.description }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %} {% block footer %}
+<p>Este es el footer</p>
+{% endblock %}
